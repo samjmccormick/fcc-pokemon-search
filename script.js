@@ -14,7 +14,7 @@ const allValidPokemon = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/";
 
 async function fetchData() {
     try {
-        const res = await fetch(allValidPokemon + searchInput.value);
+        const res = await fetch(allValidPokemon + searchInput.value.toLowerCase());
         const data = await res.json();
         showStats(data);
     } catch (err) {
@@ -28,6 +28,7 @@ function showStats(data) {
     pokemonId.textContent = data.id;
     height.textContent = data.height;
     weight.textContent = data.weight;
+
     for (let i = 0; i < stats.length; i++) {
         if (document.getElementById(`${stats[i].stat.name}`)) {
             document.getElementById(`${stats[i].stat.name}`).textContent = stats[i].base_stat
@@ -38,11 +39,13 @@ function showStats(data) {
         typesElement.innerHTML += `<span class="types">${types[i].type.name.toUpperCase()}</span>`
     }
 
-    imgDiv.innerHTML = `<img src="${sprites.front_default}" alt="${data.name.toUpperCase()}" >`
-}
+    imgDiv.innerHTML = `<img src="${sprites.front_default}" alt="${data.name.toUpperCase()}" id="sprite" >`
+};
 
 
 searchBtn.addEventListener("click", () => {
     typesElement.innerHTML = "";
     fetchData()
-})
+});
+
+
