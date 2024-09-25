@@ -6,6 +6,7 @@
 	--dark-gray: #272726;
 	--light-gray: #979695;
 	--table: #117ecc;
+    --types: #8d359d; 
 }
 
 /* universal styling */ 
@@ -106,4 +107,12 @@ td, th {
 
 th:nth-child(even), td:nth-child(even) {
     border-left: 5px solid var(--red);
+}
+
+
+.types {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--types);
+    margin: 0 5px;
 }
