@@ -1,0 +1,109 @@
+/* variables */ 
+
+:root {
+	--background: #2b2a2a;
+	--red: #d31e1e;
+	--dark-gray: #272726;
+	--light-gray: #979695;
+	--table: #117ecc;
+}
+
+/* universal styling */ 
+
+body {
+	font-size: 20px;
+	color: white;
+	background-color: var(--background);
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	align-items:center;
+
+}
+
+h1  {
+	font-weight: bold;
+	font-size: 3.0rem;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin: 10px 0;
+}
+
+/* main styling */
+
+main {
+    background-color: var(--red);
+    width: 500px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+    align-items: center;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* input styling */ 
+
+#input-wrapper {
+    width: 80%;
+    height: 75px;
+}
+
+button {
+    background-color: var(--table);
+    color: white;
+    border-style: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+input {
+    padding: 5px;
+}
+
+label {
+    margin: 5px;
+}
+
+/* screen styling */
+
+#screen {
+    background-color: var(--light-gray);
+    width: 450px;
+    height: 350px;
+    border-color: var(--dark-gray);
+    border-style: inset;
+
+}
+
+/* stats table styling */ 
+
+.table-wrapper {
+    width: 90%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    background-color: var(--table);
+}
+
+tr {
+    border-bottom: 5px solid var(--red);
+}
+
+td, th {
+    text-align: center;
+    padding: 8px;
+}
+
+th:nth-child(even), td:nth-child(even) {
+    border-left: 5px solid var(--red);
+}
