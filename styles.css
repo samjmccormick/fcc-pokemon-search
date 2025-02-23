@@ -1,118 +1,227 @@
-/* variables */ 
+/* variables */
 
 :root {
-	--background: #2b2a2a;
-	--red: #d31e1e;
-	--dark-gray: #272726;
-	--light-gray: #979695;
-	--table: #117ecc;
-    --types: #8d359d; 
+  --background: #2b2a2a;
+  --red: #d31e1e;
+  --dark-gray: #272726;
+  --light-gray: #979695;
+  --table: #117ecc;
+  --types: #8d359d;
+
+  --normal: #797979;
+  --fire: #df0404;
+  --water: #039be5;
+  --grass: #00c853;
+  --electric: #ffea00;
+  --ice: #00e5ff;
+  --fighting: #ff1744;
+  --poison: #aa00ff;
+  --ground: #a67c52;
+  --flying: #81d4fa;
+  --psychic: #f50057;
+  --bug: #8bc34a;
+  --rock: #795548;
+  --ghost: #673ab7;
+  --dragon: #3f51b5;
+  --dark: #424242;
+  --steel: #b0bec5;
+  --fairy: #ff80ab;
 }
 
-/* universal styling */ 
+/* universal styling */
 
 body {
-	font-size: 20px;
-	color: white;
-	background-color: var(--background);
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
-	justify-content: center;
-	align-items:center;
-
+  font-size: 20px;
+  color: white;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
-h1  {
-	font-weight: bold;
-	font-size: 3.0rem;
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	margin: 10px 0;
+h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 10px 0;
 }
 
 /* main styling */
 
 main {
-    background-color: var(--red);
-    width: 500px;
-    height: 800px;
-    display: flex;
-    flex-direction: column;
-	justify-content: space-around;
-	text-align: center;
-    align-items: center;
-    border-top-left-radius: 100px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+  background-color: var(--red);
+  width: 500px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
-/* input styling */ 
+/* input styling */
 
 #input-wrapper {
-    width: 80%;
-    height: 75px;
+  width: 80%;
+  height: 75px;
 }
 
 button {
-    background-color: var(--table);
-    color: white;
-    border-style: none;
-    padding: 5px;
-    border-radius: 5px;
+  background-color: var(--table);
+  color: white;
+  border-style: none;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 input {
-    padding: 5px;
+  padding: 5px;
 }
 
 label {
-    margin: 5px;
+  margin: 5px;
 }
 
 /* screen styling */
 
 #screen {
-    background-color: var(--light-gray);
-    width: 450px;
-    height: 350px;
-    border-color: var(--dark-gray);
-    border-style: inset;
-
+  background-color: var(--light-gray);
+  width: 450px;
+  height: 350px;
+  border-color: var(--dark-gray);
+  border-style: inset;
 }
 
-/* stats table styling */ 
+/* stats table styling */
 
 .table-wrapper {
-    width: 90%;
+  width: 90%;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    background-color: var(--table);
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  background-color: var(--table);
 }
 
 tr {
-    border-bottom: 5px solid var(--red);
+  border-bottom: 5px solid var(--red);
 }
 
-td, th {
-    text-align: center;
-    padding: 8px;
+td,
+th {
+  text-align: center;
+  padding: 8px;
 }
 
-th:nth-child(even), td:nth-child(even) {
-    border-left: 5px solid var(--red);
+th:nth-child(even),
+td:nth-child(even) {
+  border-left: 5px solid var(--red);
 }
-
 
 .types {
-    padding: 10px;
-    border-radius: 8px;
-    background-color: var(--types);
-    margin: 0 5px;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 0 5px;
+}
+
+/* type backgrounds */
+
+.normal {
+  background-color: var(--normal);
+  color: white;
+}
+
+.fire {
+  background-color: var(--fire);
+  color: white;
+}
+
+.water {
+  background-color: var(--water);
+  color: white;
+}
+
+.grass {
+  background-color: var(--grass);
+  color: white;
+}
+
+.electric {
+  background-color: var(--electric);
+  color: black;
+}
+
+.ice {
+  background-color: var(--ice);
+  color: black;
+}
+
+.fighting {
+  background-color: var(--fighting);
+  color: white;
+}
+
+.poison {
+  background-color: var(--poison);
+  color: white;
+}
+
+.ground {
+  background-color: var(--ground);
+  color: black;
+}
+
+.flying {
+  background-color: var(--flying);
+  color: black;
+}
+
+.psychic {
+  background-color: var(--psychic);
+  color: white;
+}
+
+.bug {
+  background-color: var(--bug);
+  color: black;
+}
+
+.rock {
+  background-color: var(--rock);
+  color: white;
+}
+
+.ghost {
+  background-color: var(--ghost);
+  color: white;
+}
+
+.dragon {
+  background-color: var(--dragon);
+  color: white;
+}
+
+.dark {
+  background-color: var(--dark);
+  color: white;
+}
+
+.steel {
+  background-color: var(--steel);
+  color: black;
+}
+
+.fairy {
+  background-color: var(--fairy);
+  color: black;
 }
